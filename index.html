@@ -7,27 +7,59 @@
     <title>Vanilla Weather App</title>
   </head>
   <body>
-    <footer>
-      <p>
-        This project was coded by
-        <a href="https://github.com/oliviia313" target="_blank"
-          >Valeriia Naumova</a
-        >
-        and is open-sourced
-        <a
-          href="https://github.com/oliviia313/Vanilla-Weather-Forecast"
-          target="_blank"
-        >
-          on GitHub</a
-        >
-        and
-        <a
-          href="https://vanila-weather-forecast-shecodes.netlify.app"
-          target="_blank"
-          >hosted on Netlify</a
-        >
-      </p>
-    </footer>
+    <div class="weather-app">
+      <header>
+        <form id="search-form">
+          <input
+            class="search-input"
+            type="search"
+            placeholder="Enter a city..."
+            required
+          />
+          <input class="search-button" type="submit" value="Search" />
+        </form>
+      </header>
+      <main>
+        <div class="current-weather">
+          <div>
+            <h1 id="current-city">Paris</h1>
+            <p class="current-details">
+              <span id="day&time">Wednesday 16:03</span>,
+              <span id="weather">clear sky</span>
+              <br />
+              Humidity: <span class="red" id="humidity">35%</span>, Wind:
+              <span class="red" id="wind">3.58km/h</span>
+            </p>
+          </div>
+          <div class="current-temp">
+            <span class="temp-icon">☀️</span>
+            <span class="temp-value" id="current-temp">14</span>
+            <span class="temp-unit">°C</span>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p>
+          This project was coded by
+          <a href="https://github.com/oliviia313" target="_blank"
+            >Valeriia Naumova</a
+          >
+          and is open-sourced
+          <a
+            href="https://github.com/oliviia313/Vanilla-Weather-Forecast"
+            target="_blank"
+          >
+            on GitHub</a
+          >
+          and
+          <a
+            href="https://vanila-weather-forecast-shecodes.netlify.app"
+            target="_blank"
+            >hosted on Netlify</a
+          >
+        </p>
+      </footer>
+    </div>
     <script src="src/script.js"></script>
   </body>
 </html>
