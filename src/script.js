@@ -5,8 +5,43 @@ function updateWeatherInfo(response) {
   let city = `${
     response.data.city.charAt(0).toUpperCase() + response.data.city.slice(1)
   }`;
+  let descElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dayTime = document.querySelector("#dayTime");
+  let date = new Date(response.data.time * 1000);
+  let iconElement = document.querySelector("#icon");
+
   cityElement.innerHTML = city;
+  dayTime.innerHTML = formatDate(date);
+  descElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+  windElement.innerHTML = `${response.data.wind.speed}km/h`;
+  iconElement.innerHTML = `<img class="temp-icon" src="${response.data.condition.icon_url}" alt="weather icon" />`;
   tempElement.innerHTML = Math.round(temp);
+}
+
+function formatDate(date) {
+  let day = date.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let weekDay = days[day];
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${weekDay} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {

@@ -67,8 +67,7 @@ main {
 }
 .temp-icon {
   position: relative;
-  top: 10px;
-  font-size: 40px;
+  top: -12px;
   margin-right: 6px;
 }
 .temp-value {
