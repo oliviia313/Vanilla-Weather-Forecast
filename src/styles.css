@@ -82,7 +82,7 @@ main {
   top: 8px;
   line-height: 1;
 }
-.weather-forecast {
+/* .weather-forecast {
   border-bottom: 1px solid #f9f7fe;
   margin: 40px 0;
   padding-bottom: 50px;
@@ -101,7 +101,7 @@ main {
 }
 .temp-min {
   opacity: 0.6;
-}
+} */
 footer {
   color: rgba(39, 33, 66, 0.4);
   font-size: 14px;
